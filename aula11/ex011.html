@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Páis</title>
+</head>
+<body>
+    <h1>Qual lugar?</h1>
+    Qual é seu país de origem?
+    <input type="text" name="txt1" id="txt1">
+    <input type="button" value="Buscar" onclick="Origem()">
+    <div id="res">
+
+    </div>
+    
+    <script>
+        function Origem(){
+            var txt = document.querySelector('input#txt1')
+            var res = document.querySelector('div#res')
+            var txtv = String(txt.value)
+            res.innerHTML = `<p>Você é do país ${txtv}</p>`
+            if (txtv == 'Brasil') {
+                res.innerHTML += '<p>Você é brasileiro</p>'
+            } 
+            else {
+                res.innerHTML += '<p>Você é estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
